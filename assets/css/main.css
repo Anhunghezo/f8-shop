@@ -12,7 +12,8 @@
 .header__navbar-list {
     list-style: none;
     padding-left: 0;
-    margin-top: 4px 0 0 0;
+    margin: 4px 0 0 0 ;
+    display: flex;
 }
 
 .header__navbar-item {
@@ -20,6 +21,90 @@
     position: relative;
     min-height: 26px;
 }
+
+.header__navbar-user{
+    display: flex;
+    justify-items: center;
+}
+.header__navbar-user-img{
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+.header__navbar-user-name{
+    margin-left: 8px;
+    font-size: 1.4rem;
+    font-weight: 400;
+}
+
+.header__navbar-user:hover .header__navbar-user-menu{
+    display: block;
+}
+
+.header__navbar-user-menu {
+    position: absolute;
+    z-index: 1;
+    padding-left: 0;
+    top: calc(100% + 4px);
+    right: 0;
+    width: 160px;
+    border-radius: 2px;
+    background-color: var(--white-color);
+    box-shadow: 0 1px 2px #ccc;
+    list-style-type: none;
+    display: none;
+}
+
+.header__navbar-user-menu::before {
+    content: "";
+    z-index: -1;
+    border-width: 20px 27px;
+    border-style:  solid;
+    border-color: transparent transparent var(--white-color) transparent;
+    position: absolute;
+    right: 8px;
+    top: -27px;
+
+}
+
+.header__navbar-user-menu::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -8px;
+    right: 0px;
+    /* background-color: black; */
+    width: 68%;
+    height: 16px;
+    transform: translateY(-50%);
+}
+
+.header__navbar-user-item {
+
+}
+.header__navbar-user-item a{
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 1.4rem;
+    font-weight: 400;
+    padding: 8px 16px;
+    display: block;
+    
+}
+.header__navbar-user-item a:hover {
+    background-color: #eee;
+}
+
+.header__navbar-user-item a:first-child {
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+}
+.header__navbar-user-item a:last-child {
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+}
+
 
 .header__navbar-item--has-qr:hover .header__qr {
     display: block;
