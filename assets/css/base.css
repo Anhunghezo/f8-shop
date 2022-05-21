@@ -168,7 +168,8 @@ p {
 
 .select-input {
     height: 34px;
-    min-width: 200px;
+    /* min-width: 200px; */
+    min-width: 190px;
     position: relative;
     padding: 0 12px;
     border-radius: 2px;
@@ -219,3 +220,61 @@ p {
 .select-input_link:hover {
     color: var(--primary-color);
 }
+
+
+body::-webkit-scrollbar {
+    width: 10px;               /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+    background: 
+rgb(219, 219, 219);        /* color of the tracking area */
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: 
+rgb(110, 110, 110);    /* color of the scroll thumb */
+    border-radius: 40px;       /* roundness of the scroll thumb */
+    border: 2px solid 
+rgb(219, 219, 219);  /* creates padding around scroll thumb */
+}
+
+/* pagination */
+.pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+}
+
+.pagination-item {
+    margin: 0 8px;
+}
+
+.pagination-item--active .pagination-item__link {
+    color: var(--white-color);
+    background-color: var(--primary-color);
+}
+
+.pagination-item--active:hover .pagination-item__link {
+    filter: brightness(90%);
+}
+
+.pagination-item__link {
+    --height: 30px;
+    height: var(--height);
+    display: block;
+    min-width: 40px;
+    color: #939393;
+    font-size: 2rem;
+    font-weight: 300;
+    text-align: center;
+    line-height: var(--height);
+    text-decoration: none;
+    border-radius: 2px;
+}
+
+.pagination-item__icon {
+
+}
+

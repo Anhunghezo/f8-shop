@@ -46,7 +46,7 @@
     position: absolute;
     z-index: 1;
     padding-left: 0;
-    top: calc(100% + 4px);
+    top: calc(100% + 6px);
     right: 0;
     width: 160px;
     border-radius: 2px;
@@ -187,6 +187,8 @@
     border-radius: 2px;
     display: none;
     animation: fadeIn ease 0.3s;
+    z-index: 1;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 .header__qr::before {
@@ -545,7 +547,7 @@
     animation: fadeIn ease-in 0.2s;
     cursor: default;
     display: none;
-    
+    z-index: 1;
 }
 
 .header__cart-heading{
@@ -558,6 +560,8 @@
 .header__cart-list-item{
     padding-left: 0;
     list-style-type: none;
+    max-height: 56vh;
+    overflow-y: auto;
 }
 .header__cart-item{
     display: flex;
@@ -588,6 +592,15 @@
     font-weight: 500;
     color: var(--text-color);
     margin: 0;
+    line-height: 2rem;
+    max-height: 4rem;
+    overflow: hidden;
+    flex: 1;
+    padding-right: 16px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    text-align: left;
 }
 .header__cart-item-price-wrap {
 
@@ -767,7 +780,7 @@
     /* overflow: hidden; */
     display: none;
     animation: fadeIn ease-in 0.2s;
-
+    z-index: 1;
 }
 
 .header__search-option::after {
@@ -836,6 +849,7 @@
     border-radius: 2px;
     box-shadow: 0 1px 5px #d3d3d3;
     display: none;
+    z-index: 1;
 }
 
 
@@ -1016,14 +1030,29 @@
 }
 
 .home-product{
-
+    margin-bottom: 10px;
 }
+/* Product item */
 
 .home-product-item{
+    display: block;
     position: relative;
     margin-top: 10px;
+    text-decoration: none;
     background-color: var(--white-color);
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+    transition: transform linear 0.1s;
+    will-change: transform;
 }
+
+.home-product-item:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 1px 20px 0 rgba(0, 0, 0, 0.05);
+
+}
+
 .home-product-item__img{
     padding-top: 100%;
     background-repeat: no-repeat;
@@ -1193,4 +1222,8 @@
     color: var(--white-color);
     position: relative;
     top: 3px;
+}
+
+.home-product__pagination {
+    margin: 48px 0 32px;
 }
