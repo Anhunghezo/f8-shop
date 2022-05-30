@@ -38,6 +38,9 @@
     .app_content {
         padding-top: 8px;
     }
+    .mobile-category {
+        display: block;
+    }
 }
 
 /* table */
@@ -81,6 +84,18 @@
         animation: mobileSearchSideIn linear 0.3s;
         display: none;
     }
+
+    @keyframes mobileSearchSideIn {
+        from {
+            opacity: 0;
+            top: calc(var(--header-height) / 2);
+        }
+        to {
+            opacity: 1;
+            top: var(--header-height);
+        }
+    }
+
     .header__search-history {
         position: fixed;
         width: 100%;
@@ -99,16 +114,14 @@
     .app_content {
         margin: 0 4px;
     }
+    .header__mobile-search  {
+        display: block;
+    }
 
-
-    @keyframes mobileSearchSideIn {
-        from {
-            opacity: 0;
-            top: calc(var(--header-height) / 2);
-        }
-        to {
-            opacity: 1;
-            top: var(--header-height);
-        }
+    .header__logo-img {
+        width: 110px;
+    }
+    .footer__content {
+        padding: 0 16px;
     }
 }
